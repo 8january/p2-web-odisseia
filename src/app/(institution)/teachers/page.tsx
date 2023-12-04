@@ -18,7 +18,7 @@ const page = () => {
   return (
     <div className="bg-[url(/elipses.svg)] bg-center bg-cover bg-no-repeat h-full w-full flex justify-center items-center flex-col bg-[#134D86] ">
       {visible && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-60">
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-80">
           <TeacherView id={id} setVisible={setVisible} />
         </div>
       )}

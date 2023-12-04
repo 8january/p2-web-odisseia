@@ -14,7 +14,7 @@ const RadarChartPlot = () => {
   const data = [
     {
       name: "Desempenho das turmas",
-      pontuacao: 500,
+      pontuacao: 430,
     },
     {
       name: "Taxa de acerto",
@@ -22,7 +22,7 @@ const RadarChartPlot = () => {
     },
     {
       name: "Desempenho geral",
-      pontuacao: 280,
+      pontuacao: 320,
     },
     {
       name: "Desempenho dos alunos",

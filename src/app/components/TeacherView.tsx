@@ -20,7 +20,7 @@ const TeacherView = ({
         setVisible(false);
       }}
     >
-      <div className="bg-white w-2/5 h-3/4 rounded-md p-8">
+      <div className="bg-white w-2/5 h-3/5 rounded-md p-8">
         <div className="flex flex-col gap-2  font-bold text-2xl">
           <div className="flex gap-2 items-center">
             <Image
@@ -28,7 +28,7 @@ const TeacherView = ({
               alt="img"
               width={200}
               height={200}
-              className="rounded-full h-[10rem] w-[13rem]"
+              className="rounded-full h-[7rem] w-[7rem]"
             ></Image>
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold">{teacher.nome}</h1>

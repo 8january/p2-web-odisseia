@@ -5,7 +5,7 @@ const Classes = () => {
   return (
     <div className="m-2">
       <h1 className="text-lime-600 text-3xl font-semibold">Turmas</h1>
-      <div className="bg-amber-400 rounded-md max-w-[50rem] w-[45rem] h-[15rem] p-3 text-white flex flex-row flex-wrap justify-center">
+      <div className="bg-lime-600 rounded-md max-w-[50rem] w-[48rem] h-[15rem] p-3 text-white flex flex-row flex-wrap justify-center">
         {db.classes.map((turma) => {
           return (
             <div

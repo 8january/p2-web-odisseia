@@ -6,15 +6,13 @@ import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
 
-const Card = ({
-  setVisible,
-  setId,
-  query,
-}: {
+interface ICard {
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setId: React.Dispatch<React.SetStateAction<number>>;
   query?: string;
-}) => {
+}
+
+const Card = ({ setVisible, setId, query }: ICard) => {
   const [teachers, setTeachers] = useState(db.teachers);
 
   React.useEffect(() => {
@@ -33,12 +31,14 @@ const Card = ({
           <div
             key={teacher.id}
             className="flex items-center gap-2 m-2 border-b-2 font-bold p-3 justify-between"
-            onClick={() => {
-              setVisible(true);
-              setId(teacher.id);
-            }}
           >
-            <div className="flex gap-2 items-center">
+            <div
+              className="flex gap-2 items-center"
+              onClick={() => {
+                setVisible(true);
+                setId(teacher.id);
+              }}
+            >
               <Image
                 src={teacher.imgUrl}
                 alt="imagem do professor"
@@ -65,7 +65,14 @@ const Card = ({
                 <FaPen />
                 Editar
               </Link>
-              <button className="px-3 py-2 bg-red-600 rounded-md flex items-center gap-3">
+              <button
+                className="px-3 py-2 bg-red-600 rounded-md flex items-center gap-3"
+                onClick={() => {
+                  setTeachers(
+                    teachers.filter((teacherDb) => teacherDb.id !== teacher.id)
+                  );
+                }}
+              >
                 <FaTrash />
                 Excluir
               </button>
